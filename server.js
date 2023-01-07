@@ -19,8 +19,6 @@ app.post('/send-email', (req, res) => {
         port: 587,
         secure: false,
         auth: {
-            user: 'alexandre@alexsantos.com.br',
-            pass: 'Amcs@0000'
             // user: process.env.MAIL_USER,
             // pass: process.env.MAIL_PASSWORD
         }
