@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Multi-Step Form</title>
+  </head>
+  <body>
+    <form action="http://localhost:3000/send-email" method="post" class="form" id="form">
+      <h1 class="text-center">Multi-Step Form</h1>
+      <!-- Progress bar -->
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        
+        <div
+          class="progress-step progress-step-active"
+          data-title="Pessoal"
+        ></div>
+        <div class="progress-step" data-title="Contato"></div>
+        <div class="progress-step" data-title="Senha"></div>
+      </div>
+
+      <!-- Steps -->
+      <div class="form-step form-step-active">
+        <div class="input-group">
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="input-group">
+          <label for="birth">Data de Nascimento</label>
+          <input type="date" name="birth" id="birth" />
+        </div>
+        <div>
+          <a class="btn btn-next width-50 ml-auto">Próximo</a>
+        </div>
+      </div>
+      <div class="form-step">
+        <div class="input-group">
+          <label for="tel">Telefone</label>
+          <input type="tel" name="tel" id="tel" />
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div class="btns-group">
+          <a class="btn btn-prev">Anterior</a>
+          <a class="btn btn-next">Próximo</a>
+        </div>
+      </div>
+      <div class="form-step">
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div class="input-group">
+          <label for="confirmPassword">Confirme a Senha</label>
+          <input
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+          />
+        </div>
+        <div class="btns-group">
+          <a class="btn btn-prev">Anterior</a>
+          <input type="submit" value="Enviar" class="btn" />
+        </div>
+      </div>
+    </form>
+    <script src="./js/app.js" defer></script>
+  </body>
+</html>
+
