@@ -3,7 +3,13 @@ const nextBtns = document.querySelectorAll(".btn-next");
 const progress = document.getElementById("progress");
 const formSteps = document.querySelectorAll(".form-step");
 const progressSteps = document.querySelectorAll(".progress-step");
-const form = document.getElementById("form");
+
+const name = document.getElementById("name");
+const birth = document.getElementById("birth");
+const tel = document.getElementById("tel");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const confirmPassword = document.getElementById("confirmPassword");
 
 let formStepsNum = 0;
 
@@ -46,31 +52,27 @@ function updateProgressBar(){
     progress.style.width = ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
 
-// form.addEventListener("submit", function(event) {
-//     event.preventDefault();
-//     var name = document.getElementById("name").value;
-//     var birth = document.getElementById("birth").value;
-//     var tel = document.getElementById("tel").value;
-//     var email = document.getElementById("email").value;
-//     var password = document.getElementById("password").value;
-//     var confirmPassword = document.getElementById("confirmPassword").value;
-//     console.log(name, birth, tel, email, password, confirmPassword);
-// });
-
-
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   
-  const formData = new FormData(form);
+  const formData = {
+    name: name.value,
+    birth: birth.value,
+    tel: tel.value,
+    email: email.value,
+    password: password.value,
+    confirmPassword: confirmPassword.value
+  }
+  console.log(formData)
   
-  fetch('http://localhost:3000/send-email', {
-    method: 'POST',
-    body: formData
-  })
-  .then((response) => {
-    return response.text();
-  })
-  .then((message) => {
-    alert(message);
-  });
+//   fetch('http://localhost:3000/send-email', {
+//     method: 'POST',
+//     body: formData
+//   })
+//   .then((response) => {
+//     return response.text();
+//   })
+//   .then((message) => {
+//     alert(message);
+//   });
 });
