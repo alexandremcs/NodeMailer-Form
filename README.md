@@ -17,7 +17,7 @@
 
 ## Descrição do Projeto
 
-Utilizando a estrutura no ![Multi-Step Form](https://github.com/alexandremcs/Multi-Step-Form), decidi implementar a funcionalidade de envio das informações do formulário por email. Para isso, escolhi o NodeMailer do Node.js.  
+Utilizando a estrutura no [Multi-Step Form](https://github.com/alexandremcs/Multi-Step-Form), decidi implementar a funcionalidade de envio das informações do formulário por email. Para isso, escolhi o NodeMailer do Node.js.  
 
 ## Status do Projeto
   
