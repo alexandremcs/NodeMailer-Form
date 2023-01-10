@@ -63,16 +63,23 @@ form.addEventListener('submit', (event) => {
     password: password.value,
     confirmPassword: confirmPassword.value
   }
-  console.log(formData)
+  console.log(formData);
   
-//   fetch('http://localhost:3000/send-email', {
-//     method: 'POST',
-//     body: formData
-//   })
-//   .then((response) => {
-//     return response.text();
-//   })
-//   .then((message) => {
-//     alert(message);
-//   });
+  let xhr = new XMLHttpRequest();
+  xhr.open('POST', '/');
+  xhr.setRequestHeader('content-type', 'application/json');
+  xhr.onload = function(){
+    if(xhr.responseText == 'success'){
+        alert('Cadastro enviado');
+        name.value = '';
+        birth.value = '';
+        tel.value = '';
+        email.value = '';
+        password.value = '';
+        confirmPassword.value = '';
+    } else {
+        alert('Algo deu errado!');
+    }
+  }
+
 });

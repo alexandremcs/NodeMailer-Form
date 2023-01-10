@@ -1,33 +1,32 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(express.json());
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/index.html')
 })
 
-app.post('/send-email', (req, res) => {
+app.post('/', (req, res) => {
 
-    let transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        service: 'smtp.gmail.com',
+    const transporter = nodemailer.createTransport({
+        host: '${process.env.MAIL_HOST}',
+        service: '${process.env.MAIL_HOST}',
         port: 587,
         secure: false,
         auth: {
-            // user: process.env.MAIL_USER,
-            // pass: process.env.MAIL_PASSWORD
+            user: '${process.env.MAIL_USER}',
+            pass: '${process.env.MAIL_PASSWORD}'
         }
     });
   
   const mailOptions = {
-    from: 'alexandre@alexsantos.com.br',
-    to: req.body.email,
-    subject: 'Assunto do Email',
+    from: req.body.email,
+    to: 'alexandre@alexsantos.com.br',
+    subject: 'Cadastro de ${req.body.email}',
     text: req.body.message
   };
   
