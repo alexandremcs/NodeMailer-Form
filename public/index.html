@@ -63,9 +63,12 @@
             id="confirmPassword"
           />
         </div>
+        <label for="captcha-input">Confirme o Captcha</label>
+        <canvas id="captcha" width="120" height="30"></canvas>
+        <input type="text" class="captcha-input" id="captcha-input" />
         <div class="btns-group">
           <a class="btn btn-prev">Anterior</a>
-          <input type="submit" value="Enviar" class="btn" />
+          <input type="submit" value="Enviar" class="btn" onclick="verifyCaptcha()" />
         </div>
       </div>
     </form>

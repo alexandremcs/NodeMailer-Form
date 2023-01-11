@@ -16,11 +16,15 @@ app.post('/', (req, res) => {
     const transporter = nodemailer.createTransport({
       // host: `${process.env.MAIL_HOST}`,
       // service: `${process.env.MAIL_HOST}`,
+      host: 'smtp.hostinger.com',
+      service: 'smtp.hostinger.com',
       port: 465,
       secure: true,
       auth: {
           // user: `${process.env.MAIL_USER}`,
           // pass: `${process.env.MAIL_PASSWORD}`
+          user: 'alexandre@alexsantos.com.br',
+          pass: 'Amcs#0000'
       }
     });
   
