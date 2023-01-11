@@ -11,23 +11,24 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
+    console.log(req.body)
 
     const transporter = nodemailer.createTransport({
-        host: '${process.env.MAIL_HOST}',
-        service: '${process.env.MAIL_HOST}',
-        port: 587,
-        secure: false,
-        auth: {
-            user: '${process.env.MAIL_USER}',
-            pass: '${process.env.MAIL_PASSWORD}'
-        }
+      host: `${process.env.MAIL_HOST}`,
+      service: `${process.env.MAIL_HOST}`,
+      port: 465,
+      secure: true,
+      auth: {
+          user: `${process.env.MAIL_USER}`,
+          pass: `${process.env.MAIL_PASSWORD}`
+      }
     });
   
   const mailOptions = {
     from: req.body.email,
-    to: 'alexandre@alexsantos.com.br',
-    subject: 'Cadastro de ${req.body.email}',
-    text: req.body.message
+    to: `${process.env.MAIL_USER}`,
+    subject: `Cadastro de ${req.body.email}`,
+    text: req.body.tel
   };
   
   transporter.sendMail(mailOptions, (error, info) => {
