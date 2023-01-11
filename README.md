@@ -1,4 +1,4 @@
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) ![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
   
 
 # NodeMailer Form
@@ -34,8 +34,35 @@ Utilizando a estrutura no [Multi-Step Form](https://github.com/alexandremcs/Mult
 
 ## 🚀 Como executar o projeto
 
-  
+```bash
 
+# Clone este repositório
+
+$ https://github.com/alexandremcs/CRUD-API-RESTful.git
+
+# Acesse a pasta do projeto no seu terminal/cmd
+
+$ cd CRUD-API-RESTful
+
+# Instale as dependências
+
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+
+$ npm start
+
+# A aplicação ficará acessível na porta:3000
+A aplicação poderá ser acessada via browser com o endereço http://localhost:3000/.
+
+```
+
+#### * Para o formulário ficar totalmente funcional, você deve criar um arquivo .env com a seguinte estrutura:
+```
+MAIL_HOST=smtp.seuservidordeemails.com
+MAIL_USER=seu@email.com
+MAIL_PASSWORD=senhaDoSeuEmail
+```
 ## 🛠 Tecnologias
 
 Ferramentas utilizadas no projeto: 
@@ -43,3 +70,5 @@ Ferramentas utilizadas no projeto:
 -  **[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)**
 -  **[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)**
 -  **[Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**
+-  **[Node.js](https://nodejs.org/)**
+-  **[Express](https://expressjs.com/)**
