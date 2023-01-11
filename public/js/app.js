@@ -55,7 +55,7 @@ function updateProgressBar(){
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   
-  const formData = {
+  let formData = {
     name: name.value,
     birth: birth.value,
     tel: tel.value,
@@ -63,23 +63,22 @@ form.addEventListener('submit', (event) => {
     password: password.value,
     confirmPassword: confirmPassword.value
   }
-  console.log(formData);
   
   let xhr = new XMLHttpRequest();
-  xhr.open('POST', '/');
+  xhr.open('POST', '/', true);
   xhr.setRequestHeader('content-type', 'application/json');
-  xhr.onload = function(){
-    if(xhr.responseText == 'success'){
-        alert('Cadastro enviado');
-        name.value = '';
-        birth.value = '';
-        tel.value = '';
-        email.value = '';
-        password.value = '';
-        confirmPassword.value = '';
-    } else {
-        alert('Algo deu errado!');
-    }
+
+  xhr.onload = function () {
+    alert('Cadastro enviado');
+    name.value = '';
+    birth.value = '';
+    tel.value = '';
+    email.value = '';
+    password.value = '';
+    confirmPassword.value = '';
+    document.location.reload(true);
   }
+
+    xhr.send(JSON.stringify(formData));
 
 });
