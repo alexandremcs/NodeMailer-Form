@@ -67,37 +67,41 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     const userInput = document.getElementById('captcha-input').value;
 
-    if (userInput === captcha) {
-        alert('CAPTCHA válido! O formulário pode ser enviado.');
-        
-        let formData = {
-            name: name.value,
-            birth: birth.value,
-            tel: tel.value,
-            email: email.value,
-            password: password.value,
-            confirmPassword: confirmPassword.value
-        }
-          
-        let xhr = new XMLHttpRequest();
-        xhr.open('POST', '/', true);
-        xhr.setRequestHeader('content-type', 'application/json');
-        
-        xhr.onload = function () {
-            alert('Cadastro enviado');
-            name.value = '';
-            birth.value = '';
-            tel.value = '';
-            email.value = '';
-            password.value = '';
-            confirmPassword.value = '';
-            document.location.reload(true);
-        }
-        
-        xhr.send(JSON.stringify(formData));
-
-    } else {
-        alert('CAPTCHA inválido. Tente novamente.');
-    }  
+    if (password.value == confirmPassword.value) {
+        if (userInput === captcha) {
+    
+            let formData = {
+                name: name.value,
+                birth: birth.value,
+                tel: tel.value,
+                email: email.value,
+                password: password.value,
+                confirmPassword: confirmPassword.value
+            }
+              
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '/', true);
+            xhr.setRequestHeader('content-type', 'application/json');
+            
+            xhr.onload = function () {
+                alert('Cadastro enviado');
+                name.value = '';
+                birth.value = '';
+                tel.value = '';
+                email.value = '';
+                password.value = '';
+                confirmPassword.value = '';
+                document.location.reload(true);
+            }
+            
+            xhr.send(JSON.stringify(formData));
+    
+        } else {
+            alert('CAPTCHA inválido. Tente novamente.');
+        }  
+      } else {
+        alert("As senhas não são iguais.");
+        confirmPassword.focus();
+    }    
 
 });
