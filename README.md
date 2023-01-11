@@ -38,11 +38,11 @@ Utilizando a estrutura no [Multi-Step Form](https://github.com/alexandremcs/Mult
 
 # Clone este repositório
 
-$ https://github.com/alexandremcs/CRUD-API-RESTful.git
+$ https://github.com/alexandremcs/NodeMailer-Form.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
 
-$ cd CRUD-API-RESTful
+$ cd NodeMailer-Form
 
 # Instale as dependências
 
@@ -57,9 +57,9 @@ A aplicação poderá ser acessada via browser com o endereço http://localhost:
 
 ```
 
-#### * Para o formulário ficar totalmente funcional, você deve criar um arquivo .env com a seguinte estrutura:
+#### * Para o formulário enviar os dados por email, você deve criar um arquivo .env na raiz do projeto com a seguinte estrutura:
 ```
-MAIL_HOST=smtp.seuservidordeemails.com
+MAIL_HOST=smtp.seuservidordeemail.com
 MAIL_USER=seu@email.com
 MAIL_PASSWORD=senhaDoSeuEmail
 ```
