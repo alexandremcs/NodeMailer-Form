@@ -3,7 +3,6 @@
 
 # NodeMailer Form
 
-- [Deploy](#deploy-do-projeto)
 - [Descrição](#descrição-do-projeto)
 - [Status do Projeto](#status-do-projeto)
 - [Funcionalidades](#⚙️-funcionalidades)
@@ -11,9 +10,7 @@
 - [Tecnologias](#🛠-tecnologias)
 
   
-## Deploy do projeto
-
-- [Acesse o deploy](#)
+- ![NodeMailer Form](https://github.com/alexandremcs/NodeMailer-Form/blob/main/public/images/NodeMailer-Form.gif)
 
 ## Descrição do Projeto
 
