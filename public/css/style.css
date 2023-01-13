@@ -1,6 +1,6 @@
 /* CSS for styling the form */
 :root {
-    --primary-color: rgb(207, 84, 12);
+    --primary-color: rgb(0, 1, 75);
 }
 
 *,
@@ -15,6 +15,7 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
+  background-color: rgb(233, 233, 233);
 }
 /* Global Stylings */
 label {
@@ -53,6 +54,7 @@ h1 {
   justify-content: space-between;
   counter-reset: step;
   margin: 2rem 0 4rem;
+  text-align: center;
 }
 
 .progressbar::before,
@@ -102,11 +104,16 @@ h1 {
 }
 
 /* Form */
-.form {
+.form-container {
   width: clamp(320px, 30%, 430px);
+  background-color: #fff;
+  z-index: 2;
   margin: 0 auto;
-  border: 1px solid #ccc;
   border-radius: 0.35rem;
+  border: 1px solid #ccc;
+}
+
+.form {
   padding: 1.5rem;
 }
 
