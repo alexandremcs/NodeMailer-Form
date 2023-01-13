@@ -19,7 +19,7 @@ Utilizando a estrutura no [Multi-Step Form](https://github.com/alexandremcs/Mult
 ## Status do Projeto
   
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=DESENVOLVENDO&color=yellow&style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=green&style=for-the-badge)
   
 
 ## ⚙️ Funcionalidades
