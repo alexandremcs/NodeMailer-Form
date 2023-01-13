@@ -10,7 +10,7 @@
 - [Tecnologias](#🛠-tecnologias)
 
   
-- ![NodeMailer Form](https://github.com/alexandremcs/NodeMailer-Form/blob/main/public/images/NodeMailer-Form.gif)
+![NodeMailer Form](https://github.com/alexandremcs/NodeMailer-Form/blob/main/public/images/NodeMailer-Form.gif)
 
 ## Descrição do Projeto
 
